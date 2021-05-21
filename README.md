@@ -5,7 +5,7 @@ Run the following commands  one by one before running the code
 pip install request
 pip install pygame 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<h1> **How to use**</h1>
+**How to use**
 > On opening the code in your respective editor, you will find 3 rows as follows: 
 1. age = 49 
 2. pincodes = ["700104"]
