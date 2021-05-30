@@ -6,6 +6,7 @@ import time
 
 age = 49
 pincodes = ["700104"]
+#You can enter more than pincode by separating them with a comma.
 num_days = 5
 
 print_flag = 'Y'
