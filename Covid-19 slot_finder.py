@@ -5,7 +5,7 @@ import time
 
 
 age = 49
-pincodes = ["700104"]
+pincodes = ["700087","700092","700054","700020","700019","700024","700025","700027"]
 #You can enter more than pincode by separating them with a comma.
 num_days = 5
 
