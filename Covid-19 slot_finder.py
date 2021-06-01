@@ -3,11 +3,12 @@ from pygame import mixer
 from datetime import datetime, timedelta
 import time
 
+# The next 3 lines are the ones you can edit
 
-age = 19
-pincodes = ["700087","700092","700107","700054","700020","700019","700024","700025","700027","700073","700107","700008","700012","700007","700006","700032","700084","700029","700023"]
-#You can enter more than pincode by separating them with a comma.
-num_days = 5
+age = 19 #enter the age 
+district_ids = ["725"] #Enter the district id of the district 
+num_days = 5 #Enter the number of days for search starting from today
+
 
 print_flag = 'Y'
 
@@ -20,10 +21,10 @@ actual_dates = [i.strftime("%d-%m-%Y") for i in list_format]
 while True:
     counter = 0   
 
-    for pincode in pincodes:   
+    for district_id in district_ids:   
         for given_date in actual_dates:
 
-            URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode={}&date={}".format(pincode, given_date)
+            URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id={}&date={}".format(district_id, given_date)
             header = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'} 
             
             result = requests.get(URL, headers=header)
@@ -35,10 +36,11 @@ while True:
                         for center in response_json["centers"]:
                             for session in center["sessions"]:
                                 if (session["min_age_limit"] <= age and session["available_capacity"] > 0 ) :
-                                    print('Pincode: ' + pincode)
+                                    #print('Pincode: ' + pincode)
                                     print("Available on: {}".format(given_date))
                                     print("\t", center["name"])
                                     print("\t", center["block_name"])
+                                    print("\t Pincode:", center["pincode"])
                                     print("\t Price: ", center["fee_type"])
                                     print("\t Availablity : ", session["available_capacity"])
 
@@ -52,9 +54,6 @@ while True:
     if counter:
         print("Search Completed!!\nGo to: https://selfregistration.cowin.gov.in/ to book your slots.\nHappy Vaccination!!")
     else:
-        mixer.init()
-        #clmixer.music.load('sound/dingdong.wav')
-        #mixer.music.play()
         print("No Vaccine slots available.")
         break 
 
