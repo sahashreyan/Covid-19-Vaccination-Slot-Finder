@@ -24,7 +24,7 @@ Run the following commands  one by one before running the code
 > The above three data are the only ones you can edit. For example:
 
 * age = 24
-* pincodes = ["729"]
+* district_ids = ["729"]
 * num_days = 3
 
 > You can make these changes as per your choice, but make sure not to touch any other part of the code.
