@@ -11,7 +11,7 @@ pip install pygame
 ------------------
 
 **How to use**
->Use the state_id.csv file to find out your State Id.
+>Use the state_id.pdf file to find out your State Id.
 >Run the district_id.py and remember to put your respective State Id. This will show you all the districts of your State and their IDs.
 --------------------------------------------------------------------------------------------------------------------------------------- 
 
