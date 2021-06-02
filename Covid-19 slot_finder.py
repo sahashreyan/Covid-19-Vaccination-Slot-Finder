@@ -5,9 +5,9 @@ import time
 
 # The next 3 lines are the ones you can edit
 
-age = 19 #enter the age 
-district_ids = ["725"] #Enter the district id of the district 
-num_days = 5 #Enter the number of days for search starting from today
+age = 19                #Enter the age 
+district_ids = ["725"]  #Enter the district id of the district 
+num_days = 5            #Enter the number of days for search starting from today
 
 
 print_flag = 'Y'
