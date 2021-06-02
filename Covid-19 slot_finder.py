@@ -38,9 +38,9 @@ while True:
                                 if (session["min_age_limit"] <= age and session["available_capacity"] > 0 ) :
                                     #print('Pincode: ' + pincode)
                                     print("Available on: {}".format(given_date))
-                                    print("\t", center["name"])
-                                    print("\t", center["block_name"])
+                                    print("\t Center:", center["name"])
                                     print("\t Pincode:", center["pincode"])
+                                    print("\t", center["block_name"])
                                     print("\t Price: ", center["fee_type"])
                                     print("\t Availablity : ", session["available_capacity"])
 
