@@ -5,9 +5,8 @@ You need to have python-3 installed  on your PC.
 Run the following commands  one by one before running the code
 --------------------------------------------------------------
 
-1. pip install cowin
-2. pip install request
-3. pip install pygame
+pip install -r requirements.txt
+
 ------------------
 
 **How to use**
